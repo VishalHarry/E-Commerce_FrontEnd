@@ -14,7 +14,7 @@ function Navbar() {
   const [isSocialMenuOpen, setIsSocialMenuOpen] = useState(false); // Toggle for Social Menu
 
   return (
-    <header className="w-full bg-white fixed top-0 left-0 z-50 shadow-md ">
+    <header className="w-full bg-white/20 backdrop-blur-lg fixed top-0 left-0 z-50 shadow-md ">
      
 
       {/* Header Bottom */}

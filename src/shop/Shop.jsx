@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Blog() {
+function Shop() {
   return (
     <div className='pt-20'>
-      blog
+      Shop page
     </div>
   )
 }
 
-export default Blog
+export default Shop

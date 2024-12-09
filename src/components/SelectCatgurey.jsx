@@ -2,7 +2,7 @@ import React from 'react'
 
 const SelectCatgurey = (select) => {
     return (
-        <select className="px-6 py-3 bg-[#FB8C00] text-white rounded-full shadow-lg shadow-gray-400 hover:bg-[#e67c00] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#FB8C00] transition duration-300"    >
+        <select className="px-6 py-3 w-[20%] bg-[#FB8C00] text-white rounded-full shadow-lg shadow-gray-400 hover:bg-[#e67c00] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#FB8C00] transition duration-300"    >
             <option value="all">All Categories</option>
             <option value="electronics">Electronics</option>
             <option value="computer">Computer</option>

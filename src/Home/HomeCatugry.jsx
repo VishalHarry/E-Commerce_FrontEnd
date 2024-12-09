@@ -11,7 +11,7 @@ const categoryList = [
   {
     imgUrl: 'src/assets/images/category/02.jpg',
     imgAlt: 'Shoes',
-    iconName: 'icofont-shoe',
+    iconName:'icofont-shoe',
     title: 'Shoes',
   },
   {
@@ -51,7 +51,7 @@ function HomeCategory() {
 
       {/* Category Boxes Section */}
       <div className='w-full max-w-screen-xl px-5'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6'>
           {categoryList.map((category, i) => (
            <Link to="/shop">
             <div key={i} className='relative rounded-lg overflow-hidden shadow-lg bg-white group hover:scale-105 transition-transform duration-300'>
