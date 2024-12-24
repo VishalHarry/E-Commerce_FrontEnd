@@ -204,30 +204,30 @@ function HomeProductCatugry() {
                 </div>
             </div>
 
-            {/* product Section */}
+                {/* product Section */}
 
-            <div className="h-auto w-[90%]  mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {item.map((product, index) => (
-                    <Link to={`/shop/${product.id}`} key={index}>
-                        <div className="w-full h-auto bg-white rounded-md shadow-lg hover:shadow-2xl transition-all p-5">
-                            <div className="w-full h-[150px] overflow-hidden rounded-md">
-                                <img
-                                    className="w-full h-full object-cover hover:scale-110 transition-transform"
-                                    src={product.imgUrl}
-                                    alt="product"
-                                />
+                <div className="h-auto w-[90%]  mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    {item.map((product, index) => (
+                        <Link to={`/shop/${product.id}`} key={index}>
+                            <div className="w-full h-auto bg-white rounded-md shadow-lg hover:shadow-2xl transition-all p-5">
+                                <div className="w-full h-[150px] overflow-hidden rounded-md">
+                                    <img
+                                        className="w-full h-full object-cover hover:scale-110 transition-transform"
+                                        src={product.imgUrl}
+                                        alt="product"
+                                    />
+                                </div>
+                                <div className="mt-3 text-center">
+                                    <h3 className="text-lg font-semibold text-gray-800">{product.title}</h3>
+                                    <p className="text-sm text-gray-600 mt-1">{product.brand}</p>
+                                    <p className="text-lg font-bold text-red-500 mt-2">{product.price}</p>
+                                </div>
+                                {/* Rating Component */}
+                                <Rating value={Math.random() * 5} /> {/* Generate random ratings for now */}
                             </div>
-                            <div className="mt-3 text-center">
-                                <h3 className="text-lg font-semibold text-gray-800">{product.title}</h3>
-                                <p className="text-sm text-gray-600 mt-1">{product.brand}</p>
-                                <p className="text-lg font-bold text-red-500 mt-2">{product.price}</p>
-                            </div>
-                            {/* Rating Component */}
-                            <Rating value={Math.random() * 5} /> {/* Generate random ratings for now */}
-                        </div>
-                    </Link>
-                ))}
-            </div>
+                        </Link>
+                    ))}
+                </div>
         </div>
 
     )

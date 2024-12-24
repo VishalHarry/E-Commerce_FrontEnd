@@ -34,22 +34,23 @@ function Banner() {
             </h1>
 
             {/* Search Form */}
+            {/* Search Form */}
             <form className="flex items-center justify-center space-x-2 text-black relative">
               <SelectCatgurey select="all" />
-              <input
-                type="text"
-                placeholder="Search Your Product"
-                className="w-full max-w-xl p-4 rounded-full shadow-lg shadow-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FB8C00] hover:shadow-xl bg-gray-100 placeholder-gray-500"
-                value={searchInput}
-                onChange={handleSearch}
-              />
-              <button
-                className="px-6 py-3 bg-[#FB8C00] text-white rounded-full shadow-lg shadow-gray-400 hover:bg-[#e67c00] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#FB8C00] transition duration-300"
-              >
-
-                <AiOutlineSearch size={25} className="text-white  " /> {/* Search Symbol Icon */}
-
-              </button>
+              <div className="flex items-center w-full max-w-xl rounded-full shadow-lg shadow-gray-400 bg-gray-100 hover:shadow-xl focus-within:ring-2 focus-within:ring-[#FB8C00]">
+                <input
+                  type="text"
+                  placeholder="Search Your Product"
+                  className="flex-1 overflow-hidden p-4 rounded-l-full focus:outline-none bg-gray-100 placeholder-gray-500"
+                  value={searchInput}
+                  onChange={handleSearch}
+                />
+                <button
+                  className="px-6 text-black"
+                >
+                  <AiOutlineSearch size={25} className="" /> {/* Search Symbol Icon */}
+                </button>
+              </div>
 
               {/* Filtered Products Box */}
               {searchInput && (
@@ -71,8 +72,8 @@ function Banner() {
                   </div>
                 </div>
               )}
-
             </form>
+
 
             {/* Subtitle */}
             <p className="text-lg text-gray-600">

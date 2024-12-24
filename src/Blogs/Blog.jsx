@@ -1,10 +1,11 @@
 import React from 'react'
+import PageHeader from '../components/PageHeader'
 
 function Blog() {
   return (
-    <div className='pt-20'>
-      blog
-    </div>
+   <div>
+     <PageHeader titel="Our Blog Page" curPage="Blog"/>
+   </div>
   )
 }
 
