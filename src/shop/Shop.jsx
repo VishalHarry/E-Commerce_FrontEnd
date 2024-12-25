@@ -5,6 +5,8 @@ import ProductCart from './ProductCart';
 import Search from './Search'; // Import the SearchBar component
 import SelectCatgurey from '../components/SelectCatgurey';
 import AllCatugry from './AllCatugry';
+import PopularPost from './PopularPost';
+import Tags from './Tags';
 
 function Shop() {
   const [GridList, setGridList] = useState(false);
@@ -85,6 +87,8 @@ function Shop() {
             <div className="h-full flex-1 bg-gray-100 p-4 rounded-md shadow-md">
               <Search gridlist={GridList} />
               <AllCatugry filterItem={filteredItem} setItem={setProduct} manuItem={manu} setproduct={setProduct} selectCatgurey={selectCatgurey} />
+              <PopularPost/>
+              <Tags/>
             </div>
           </div>
         </div>
