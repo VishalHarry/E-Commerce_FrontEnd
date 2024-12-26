@@ -36,7 +36,7 @@ function Banner() {
             {/* Search Form */}
             {/* Search Form */}
             <form className="flex items-center justify-center space-x-2 text-black relative">
-              <SelectCatgurey select="all" />
+              {/* <SelectCatgurey select="all" /> */}
               <div className="flex items-center w-full max-w-xl rounded-full shadow-lg shadow-gray-400 bg-gray-100 hover:shadow-xl focus-within:ring-2 focus-within:ring-[#FB8C00]">
                 <input
                   type="text"
