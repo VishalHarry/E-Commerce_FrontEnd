@@ -34,8 +34,22 @@ function ProductDisplay({ items }) {
             color: color,
             coupn: coupn,
             
-        };
-        console.log(product);
+        };  
+        // console.log(product);
+        const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingProductIndex = existingCart.findIndex((item) => item.id === id);
+        
+        if (existingProductIndex !== -1) {
+            existingCart[existingProductIndex].quantity += prequantity;
+        } else {
+            existingCart.push(product);
+        }
+        
+        localStorage.setItem('cart', JSON.stringify(existingCart));
+        setquantity(1);
+        setsize("select size");
+        setcolor("select color"); // Removed redundant setcolor call
+        
     };
 
     return (
