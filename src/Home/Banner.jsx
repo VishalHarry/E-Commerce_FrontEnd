@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import productdata from '../products.json';
 import { Link } from 'react-router-dom';
 import { AiOutlineSearch } from 'react-icons/ai';
-import SelectCatgurey from '../components/SelectCatgurey';
+import img1 from '../assets/images/cursorImg/banner.jpg';
 
 function Banner() {
   const [searchInput, setSearchInput] = useState('');
@@ -22,18 +22,27 @@ function Banner() {
 
   return (
     <div className="h-screen w-full pt-20 sm-h-full">
-      <div className="flex items-center justify-center h-full">
-        <div className="w-full h-full sm:w-3/5 sm:h-auto rounded-lg p-8 flex flex-col items-center j   space-y-4">
+      <div
+        className="flex items-center justify-center h-full w-full bg-cover bg-center relative"
+        style={{
+          backgroundImage: `url(${img1})`, // Replace with your image URL
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Blur Overlay */}
+        <div className="absolute inset-0 bg-black opacity-40 backdrop-blur-6xl z-0"></div>
+
+        <div className="w-full h-full sm:w-3/5 sm:h-auto rounded-lg p-8 flex flex-col items-center space-y-4 z-10">
           {/* Banner Content */}
           <div className="banner-container text-center space-y-6">
             {/* Title */}
-            <h1 className="text-5xl font-thin text-gray-800">
+            <h1 className="text-5xl font-thin text-white">
               Search Your One From{' '}
               <span className="font-semibold text-[#FB8C00]">Thousand</span> Of
               Products
             </h1>
 
-            {/* Search Form */}
             {/* Search Form */}
             <form className="flex items-center justify-center space-x-2 text-black relative">
               {/* <SelectCatgurey select="all" /> */}
@@ -45,10 +54,8 @@ function Banner() {
                   value={searchInput}
                   onChange={handleSearch}
                 />
-                <button
-                  className="px-6 text-black"
-                >
-                  <AiOutlineSearch size={25} className="" /> {/* Search Symbol Icon */}
+                <button className="px-6 text-black">
+                  <AiOutlineSearch size={25} />
                 </button>
               </div>
 
@@ -74,17 +81,13 @@ function Banner() {
               )}
             </form>
 
-
             {/* Subtitle */}
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-100">
               Discover amazing products and deals just for you!
             </p>
           </div>
-
         </div>
       </div>
-
-
     </div>
   );
 }

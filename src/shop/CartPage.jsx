@@ -41,7 +41,7 @@ function CartPage() {
   const orderTotal = cartSubtotal + 10; // Assume flat shipping fee of 10
 
   return (
-    <div className="mt-20">
+    <div>
       <PageHeader titel="Shop Cart" curPage="Cart Page" />
       <div className="shop-cart p-8">
         <div className="container mx-auto">

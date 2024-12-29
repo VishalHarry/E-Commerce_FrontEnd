@@ -208,7 +208,7 @@ function HomeProductCatugry() {
 
                 <div className="h-auto w-[90%]  mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {item.map((product, index) => (
-                        <Link to={`/shop/${product.id}`} key={index}>
+                        <Link to={`/shop`} key={index}>
                             <div className="w-full h-auto bg-white rounded-md shadow-lg hover:shadow-2xl transition-all p-5">
                                 <div className="w-full h-[150px] overflow-hidden rounded-md">
                                     <img
