@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function ProductDisplay({ items }) {
-    const { name, id, price, seller, ratingsCount, quantity } = items;
+    const { img,name, id, price, seller, ratingsCount, quantity } = items;
     const [prequantity, setquantity] = useState(quantity);
     const [coupn, setcoupon] = useState("");
     const [size, setsize] = useState("select size");
@@ -26,7 +26,9 @@ function ProductDisplay({ items }) {
     const handlesubmit = (e) => {
         e.preventDefault();
         const product = {
+            
             id: id,
+            img:img,
             name: name,
             price: price,
             quantity: prequantity,
