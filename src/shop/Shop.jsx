@@ -39,7 +39,7 @@ function Shop() {
   };
 
   return (
-    <div>
+    <div className='mt-20'>
       <PageHeader titel="Our Shop Page" curPage="Shop" />
       <div className="shop-page p-10">
         <div className="container">

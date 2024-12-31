@@ -9,6 +9,7 @@ export default {
       animation: {
         'slide-down': 'slideDown 0.5s ease-out',
       },
+      
       keyframes: {
         slideDown: {
           '0%': { transform: 'translateY(-100%)', opacity: 0 },

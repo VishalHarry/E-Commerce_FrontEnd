@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import blogList from '../utilis/blogdata'
 
 const postList = [
   { id: 1, imgUrl: '/src/assets/images/blog/10.jpg', imgAlt: 'rajibraj91', title: 'Poor People Campaign Our Resources', date: 'Jun 05,2022' },
@@ -15,7 +16,7 @@ function PopularPost() {
         <h5 className="text-lg font-semibold mb-4">Popular Post</h5>
       </div>
       <ul className="space-y-4">
-        {postList.map((post) => (
+        {blogList.map((post) => (
           <li key={post.id} className="flex gap-4 items-start">
             <div className="post-thumb flex-shrink-0 w-24 h-24">
               <Link to={`/blog/${post.id}`}>

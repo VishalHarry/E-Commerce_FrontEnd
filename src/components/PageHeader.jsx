@@ -10,7 +10,7 @@ import img4 from '../assets/images/cursorImg/img4.jpg'
 function PageHeader({ titel, curPage }) {
   return (
     <div
-      className="relative bg-cover bg-center bg-no-repeat h-[70vh] flex items-center justify-center overflow-hidden mt-20"
+      className="relative bg-cover bg-center bg-no-repeat h-[70vh] flex items-center justify-center overflow-hidden "
       style={{
         backgroundImage: `url(${img1})`
       }}
@@ -31,7 +31,7 @@ function PageHeader({ titel, curPage }) {
         >
           <div className="relative w-full h-full">
             <img
-             src={img1} alt="Description of the image"
+             src={img2} alt="Description of the image"
               
               className="object-cover w-full h-full"
             />
@@ -39,7 +39,7 @@ function PageHeader({ titel, curPage }) {
           </div>
           <div className="relative w-full h-full">
             <img
-             src={img2} alt="Description of the image"
+             src={img1} alt="Description of the image"
              
               className="object-cover w-full h-full"
             />
