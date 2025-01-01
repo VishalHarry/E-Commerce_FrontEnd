@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo/01.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram, faPinterestP } from '@fortawesome/free-brands-svg-icons';
+import { AuthContext } from './contaxt/AuthProvider';
 
 
 // color-> #FB8C00
@@ -12,7 +13,9 @@ function Navbar() {
   const [isMainMenuOpen, setIsMainMenuOpen] = useState(false); // Toggle for Main Menu
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false); // Toggle for Sign-In/Login Menu
   const [isSocialMenuOpen, setIsSocialMenuOpen] = useState(false); // Toggle for Social Menu
-
+  const {user}=useContext(AuthContext)
+ 
+  
   return (
     <header className="w-full bg-white/20 backdrop-blur-lg fixed top-0 left-0 z-50 shadow-md ">
      
